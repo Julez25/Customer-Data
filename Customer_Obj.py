@@ -21,7 +21,7 @@ class NewCust():
             getter_ = csv.reader(file)
             for row in getter_:
                 print(row)
-CustObj = NewCust("julian", "Tomic", "blabalbla", "quitsche ente")
+CustObj = NewCust("julian", "T", "blabalbla", "quitsche ente")
 CustObj.saveData()
 CustObj.getData()
 
