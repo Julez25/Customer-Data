@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS Users (
     region TEXT NOT NULL,
     city TEXT NOT NULL,
     plz INTEGER,
+               
     adress TEXT NOT NULL,
     
 )
@@ -23,9 +24,9 @@ CREATE TABLE IF NOT EXISTS Users (
 conn.commit()
 
 #Daten durch die Customer Class in die DataBase einfügen
-def saveCust(Customer_):
+def saveCust():
     cursor.execute("INSERT INTO users (id, order_id, first_N, second_N, land, region, city, plz, adress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", ())
     
-newCust = Customer_Obj()
-saveCust(newCust)
+newCust = Customer_Obj(123, 200, "julian", "T", "DE", "By", "MU", 80689, "blabla")
+saveCust()
 
